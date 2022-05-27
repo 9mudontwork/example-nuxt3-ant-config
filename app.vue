@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2 max-w-[500px] mx-auto my-4">
+  <div class="flex flex-col gap-2 max-w-[500] mx-auto my-4">
     <CDatePicker />
     <CButton>
       test
@@ -8,5 +8,4 @@
 </template>
 
 <script setup>
-import '@/assets/css/tailwind.css'
 </script>
