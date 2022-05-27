@@ -5,7 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "eslint": "eslint --ext .js.ts,.vue --ignore-path .gitignore .",
+    "eslint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "eslint:fix": "npm run eslint -- --fix"
   },
   "devDependencies": {
