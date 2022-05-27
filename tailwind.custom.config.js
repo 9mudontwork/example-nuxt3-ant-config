@@ -1,27 +1,28 @@
-const plugin = require("tailwindcss/plugin");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const plugin = require('tailwindcss/plugin')
 
 const remResolver = (value = 0) => {
-  const isNumber = Number(value);
+  const isNumber = Number(value)
 
   if (isNumber) {
-    value = Number(value) / 16 + "rem";
+    value = Number(value) / 16 + 'rem'
   }
 
-  return value;
-};
+  return value
+}
 
 const customUnitPlugin = () => {
   return plugin(function ({ matchUtilities, theme, variants }) {
     const coreList = {
-      padding: "p",
+      padding: 'p',
       // margin: 'm',
-      width: "w",
-      height: "h",
-      maxHeight: "max-h",
-      minHeight: "min-h",
-      maxWidth: "max-w",
-      minWidth: "min-w",
-    };
+      width: 'w',
+      height: 'h',
+      maxHeight: 'max-h',
+      minHeight: 'min-h',
+      maxWidth: 'max-w',
+      minWidth: 'min-w',
+    }
 
     const genCore = (coreKey, coreValue) => {
       matchUtilities(
@@ -34,17 +35,17 @@ const customUnitPlugin = () => {
           values: theme(coreKey),
           variants: variants(coreKey),
         }
-      );
-    };
+      )
+    }
 
     for (const key in coreList) {
-      genCore(key, coreList[key]);
+      genCore(key, coreList[key])
     }
 
     const insetList = {
-      padding: "p",
+      padding: 'p',
       // margin: 'm',
-    };
+    }
 
     for (const key in insetList) {
       matchUtilities(
@@ -79,10 +80,10 @@ const customUnitPlugin = () => {
           values: theme(key),
           variants: variants(key),
         }
-      );
+      )
     }
-  });
-};
+  })
+}
 
 const customFontSize = () => {
   return plugin(function ({ matchUtilities, theme, variants }) {
@@ -93,12 +94,12 @@ const customFontSize = () => {
         }),
       },
       {
-        values: theme("fontSize"),
-        variants: variants("fontSize"),
+        values: theme('fontSize'),
+        variants: variants('fontSize'),
       }
-    );
-  });
-};
+    )
+  })
+}
 
-exports.customUnitPlugin = customUnitPlugin;
-exports.customFontSize = customFontSize;
+exports.customUnitPlugin = customUnitPlugin
+exports.customFontSize = customFontSize

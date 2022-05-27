@@ -1,0 +1,33 @@
+{
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.tabSize": 2
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.tabSize": 2
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.tabSize": 2
+  },
+
+  "tailwindCSS.experimental.classRegex": [
+    "%w\\[\\s*([^\\]]*)\\s*\\]",
+    "'([^']*)'",
+    ["/\\*tw\\*/ ([^;]*);", "'([^']*)'"]
+  ],
+
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownAtRules": "ignore"
+}

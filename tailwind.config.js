@@ -1,10 +1,8 @@
-const {
-  customUnitPlugin,
-  customFontSize,
-} = require("./tailwind.custom.config");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { customUnitPlugin, customFontSize } = require('./tailwind.custom.config')
 
 module.exports = {
-  content: ["./app.vue", "./global-components/**/*.{vue,js,ts,jsx,tsx}"],
+  content: ['./app.vue', './global-components/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {},
   },
@@ -18,4 +16,4 @@ module.exports = {
     maxWidth: false,
     minWidth: false,
   },
-};
+}
