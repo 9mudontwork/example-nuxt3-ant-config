@@ -80,6 +80,12 @@ module.exports = {
 
     'vue/multi-word-component-names': 0,
 
+    // ======================================
+    // ======================================
+    // tailwind
+    // ======================================
+    // ======================================
+
     'tailwindcss/classnames-order': [
       'warn',
       {
@@ -90,7 +96,11 @@ module.exports = {
 
     'tailwindcss/no-custom-classname': ['off'],
 
+    // ======================================
+    // ======================================
     // prettier
+    // ======================================
+    // ======================================
     'prettier/prettier': [
       'error',
       {
@@ -106,6 +116,17 @@ module.exports = {
         arrowParens: 'always',
         vueIndentScriptAndStyle: true,
       },
+    ],
+
+    // ======================================
+    // ======================================
+    // typescript
+    // ======================================
+    // ======================================
+    // https://typescript-eslint.io/rules/no-unused-vars/
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
     ],
   },
 }
